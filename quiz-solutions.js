@@ -1,4 +1,27 @@
-// quiz begins, no answers correct
+var correct = 0;
+var totalAsked = 0;
+var i = 0;
+
+var quizQA = [
+	["asking some question", "TEST"],
+	["another question here", "ANSWER"],
+	["a final question", "DEMO"]
+];
+
+function question () {
+	while (i < quizQA.length) {
+		var answerInput = prompt(quizQA[i][0]);
+		totalAsked += 1;
+		if (answerInput.toUpperCase() === quizQA[i][1]){
+			correct += 1;
+		}
+		i++;
+	}
+}
+
+
+
+/*// quiz begins, no answers correct
 var correct = 0;
 var totalAsked = 0;
 
@@ -16,7 +39,7 @@ question("asking some question", "TEST"); //always create the function before ca
 question("another question here", "ANSWER");
 question("a final question for the demo", "DEMO");
 
-/*var answer1 = prompt("Name a programming language that's also a gem");
+var answer1 = prompt("Name a programming language that's also a gem");
 if ( answer1.toUpperCase() === 'RUBY' ) {
  correct += 1; 
 }
@@ -35,7 +58,7 @@ if ( answer4.toUpperCase() === 'HTML' ) {
 var answer5 = prompt("What language do you use to add interactivity to a web page?");
 if ( answer5.toUpperCase() === 'JAVASCRIPT' ) {
  correct += 1; 
-}*/
+}
 
 // output results
 document.write("<p>You got " + correct + " out of " + totalAsked + " questions correct.<p>");
@@ -50,4 +73,4 @@ if ( correct === 5 ) {
 } else {
   document.write("<p><strong>No crown for you. You need to study.</strong></p>");
 }
-               
+               */
