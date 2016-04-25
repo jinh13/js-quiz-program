@@ -8,7 +8,7 @@ var quizQA = [
 	["a final question", "DEMO"]
 ];
 
-function question () {
+function question() {
 	while (i < quizQA.length) {
 		var answerInput = prompt(quizQA[i][0]);
 		totalAsked += 1;
@@ -19,6 +19,8 @@ function question () {
 	}
 }
 
+question();
+document.write("<p>You got " + correct + " out of " + totalAsked + " questions correct.<p>");
 
 
 /*// quiz begins, no answers correct
